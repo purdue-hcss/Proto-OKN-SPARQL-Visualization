@@ -4,43 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
     <script src="./dist/js/sparqlblocks.min.js"></script>
-    <script src="./dist/js/sparqlblocks.min.js.map"></script>
-    <link href="./dist/css/style.css" rel="stylesheet"></link>
     
-    <style>
-        #test{
-            width: 100vw;
-            height: 100vh;
-            padding: 0;
-        }
-        #run{
-            position:absolute;
-            top:20px;
-            right:40px;
-        }
-    </style>
 
-</head>
-<body>
-    <div id="test"></div>
-    <button id="run">Run</button>
+    <!-- <script src="./dist/js/sparqlblocks.min.js.map"></script> -->
     <script>
-        var test = document.querySelector("#test")
-        sparqlVisualQuery.createBlocks(test)
-        // sparqlVisualQuery.setURL("https://proto-okn.naide.su:3030/kg")
-        sparqlVisualQuery.setURL("http://127.0.0.1:3030/kg")
-
-        const btn = document.querySelector("#run");
-        btn.addEventListener("click", function(){
-            alert(sparqlVisualQuery.getQuery())
-            sparqlVisualQuery.getResult().then((val)=>{
-                console.log(val);
-            });
-        })
+        var xx = ("./dist/js/sparqlblocks.min.js")
+        console.log("STORGAE", xx.WorkspaceActions)
         
     </script>
+</head>
+<body>
+    
 </body>
 </html>
