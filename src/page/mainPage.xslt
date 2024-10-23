@@ -71,7 +71,7 @@
           height:60%;
           width:100%;
           display:flex;
-          position:absolute;
+          position:relative;
         }
         .main{
           height:100%;
