@@ -3,7 +3,7 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns="http://www.w3.org/1999/xhtml">
   <xsl:template name="toolbox-common">
-    <category name="&#xf104; Prefix" colour="#B2CEB0">
+    <category name="&#xf104; Predicate" colour="#B2CEB0">
       <block type="sparql_subject_propertylist">
         <value name="SUBJECT">
           <shadow type="variables_get">
@@ -11,7 +11,7 @@
           </shadow>
         </value>
         <statement name="PROPERTY_LIST">
-          <shadow type="sparql_verb_object">
+          <shadow type="sparql_has_a_version_called_object">
             <!--<value name="VERB">
               <shadow type="variables_get">
                 <field name="VAR">pred</field>
@@ -32,39 +32,23 @@
           </shadow>
         </value>
         <value name="TYPE">
-          <shadow type="sparql_type_version">
+          <shadow type="sparql_type_software_version">
           </shadow>
         </value>
       </block>
       <sep gap="32"></sep>
-      <block type="sparql_verb_object">
+      <block type="sparql_has_a_version_called_object">
         <value name="OBJECT">
           <shadow type="variables_get">
             <field name="VAR">version</field>
           </shadow>
         </value>
       </block>
-      <!-- <sep gap="8"></sep> -->
-      <!-- <block type="sparql_operate_on_object">
-        <value name="OBJECT">
-          <shadow type="variables_get">
-            <field name="VAR">hardware version</field>
-          </shadow>
-        </value>
-      </block>
       <sep gap="8"></sep>
-      <block type="sparql_vulnerable_to_object">
+      <block type="sparql_has_a_hardware_version_object">
         <value name="OBJECT">
           <shadow type="variables_get">
-            <field name="VAR">vulnerability</field>
-          </shadow>
-        </value>
-      </block>
-      <sep gap="8"></sep>
-      <block type="sparql_is_a_object">
-        <value name="OBJECT">
-          <shadow type="variables_get">
-            <field name="VAR">vulnerability type</field>
+            <field name="VAR">version</field>
           </shadow>
         </value>
       </block>
@@ -75,11 +59,20 @@
             <field name="VAR">version</field>
           </shadow>
         </value>
-      </block> -->
+      </block> 
+       <sep gap="8"></sep>
       <block type="sparql_affects_object">
         <value name="OBJECT">
           <shadow type="variables_get">
             <field name="VAR">version</field>
+          </shadow>
+        </value>
+      </block>
+      <sep gap="8"></sep>
+      <block type="sparql_operate_on_object">
+        <value name="OBJECT">
+          <shadow type="variables_get">
+            <field name="VAR">software</field>
           </shadow>
         </value>
       </block>
@@ -506,8 +499,26 @@
     </category>
 
     <category name="&#xf107; Entities" colour="#B0CBE1">
-      <block type="sparql_type_version">
+      <block type="sparql_type_software_version">
       </block>
+      <block type="sparql_type_software">
+      </block>
+      <block type="sparql_type_hardware_version">
+      </block>
+      <block type="sparql_type_hardware">
+      </block>
+      <block type="sparql_type_vulnerability">
+      </block>
+      <block type="sparql_type_vulnerability_type">
+      </block>
+      <block type="sparql_type_license">
+      </block>
+      <block type="sparql_type_organization">
+      </block>
+      <block type="sparql_type_person">
+      </block>
+      
+      
       <block type="variables_get">
         <field name="VAR">var</field>
       </block>

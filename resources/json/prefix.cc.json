@@ -1,7 +1,7 @@
 {
   "yago": "http://yago-knowledge.org/resource/",
   "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-  "ns":"secure-chain://#",
+  "ns":"https://w3id.org/secure-chain/",
   "foaf": "http://xmlns.com/foaf/0.1/",
   "dbp": "http://dbpedia.org/property/",
   "dbo": "http://dbpedia.org/ontology/",

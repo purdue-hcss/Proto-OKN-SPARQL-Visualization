@@ -80,7 +80,7 @@
                   </block>
                 </value>
                 <value name="TYPE">
-                  <block type="sparql_type_version">
+                  <block type="sparql_type_software_version">
                   </block>
                 </value>
               </block>
@@ -89,14 +89,14 @@
             <block type="sparql_subject_propertylist">
               <value name="SUBJECT">
                 <block type="variables_get">
-                  <field name="VAR">cve</field>
+                  <field name="VAR">version</field>
                 </block>
               </value>
               <statement name="PROPERTY_LIST">
                 <block type="sparql_affects_object">
                   <value name="OBJECT">
                     <block type="variables_get">
-                      <field name="VAR">version</field>
+                      <field name="VAR">cve</field>
                     </block>
                   </value>
                 </block>

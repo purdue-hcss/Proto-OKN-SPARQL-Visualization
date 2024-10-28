@@ -21,6 +21,7 @@
 
 var Sparql = require('../sparql.js');
 var prefix = "ns:"
+var schema = "schema:"
 
 Sparql.sparql_isa = function(block) {
   var value_type =
@@ -38,11 +39,11 @@ Sparql.sparql_isa = function(block) {
 
 Sparql.sparql_affects_object = function(block) {
   // var value_verb = Sparql.valueToCode(block, 'VERB', Sparql.ORDER_ATOMIC);
-  var value_verb = prefix+"affects"
+  var value_verb = prefix+"vulnerableTo"
   var value_object = Sparql.valueToCode(block, 'OBJECT', Sparql.ORDER_ATOMIC);
   var code =
       value_verb ?
-        ( prefix+"affects" + ' ' +
+        ( prefix+"vulnerableTo" + ' ' +
           (value_object ? value_object : '[]') +
           Sparql.STMNT_BRK ) :
         '';
@@ -51,11 +52,24 @@ Sparql.sparql_affects_object = function(block) {
 
 Sparql.sparql_has_a_version_called_object = function(block) {
   // var value_verb = Sparql.valueToCode(block, 'VERB', Sparql.ORDER_ATOMIC);
-  var value_verb = prefix+"has-a-version-called"
+  var value_verb = prefix+"has-a-software-version-called"
   var value_object = Sparql.valueToCode(block, 'OBJECT', Sparql.ORDER_ATOMIC);
   var code =
       value_verb ?
-        ( prefix+"hasVersion" + ' ' +
+        ( prefix+"hasSoftwareVersion" + ' ' +
+          (value_object ? value_object : '[]') +
+          Sparql.STMNT_BRK ) :
+        '';
+  return code;
+};
+
+Sparql.sparql_has_a_hardware_version_object = function(block) {
+  // var value_verb = Sparql.valueToCode(block, 'VERB', Sparql.ORDER_ATOMIC);
+  var value_verb = prefix+"has-a-hardware-version-called"
+  var value_object = Sparql.valueToCode(block, 'OBJECT', Sparql.ORDER_ATOMIC);
+  var code =
+      value_verb ?
+        ( prefix+"hasHardwareVersion" + ' ' +
           (value_object ? value_object : '[]') +
           Sparql.STMNT_BRK ) :
         '';
@@ -63,11 +77,11 @@ Sparql.sparql_has_a_version_called_object = function(block) {
 };
 
 Sparql.sparql_verb_object = function(block) {
-  var value_verb = prefix+"has-a-version-called"
+  var value_verb = prefix+"has-a-software-version-called"
   var value_object = Sparql.valueToCode(block, 'OBJECT', Sparql.ORDER_ATOMIC);
   var code =
       value_verb ?
-        ( prefix+"hasVersion" + ' ' +
+        ( prefix+"hasSoftwareVersion" + ' ' +
           (value_object ? value_object : '[]') +
           Sparql.STMNT_BRK ) :
         '';
@@ -75,7 +89,7 @@ Sparql.sparql_verb_object = function(block) {
 }
 
 Sparql.sparql_operate_on_object = function(block) {
-  var value_verb = prefix+"operates-on"
+  var value_verb = prefix+'operatesOn'
   var value_object = Sparql.valueToCode(block, 'OBJECT', Sparql.ORDER_ATOMIC);
   var code =
       value_verb ?
@@ -99,7 +113,7 @@ Sparql.sparql_is_a_object = function(block) {
 };
 
 Sparql.sparql_vulnerable_to_object = function(block) {
-  var value_verb = prefix+"vulnerable-to"
+  var value_verb = prefix+"vulnerableTo"
   var value_object = Sparql.valueToCode(block, 'OBJECT', Sparql.ORDER_ATOMIC);
   var code =
       value_verb ?
@@ -112,7 +126,7 @@ Sparql.sparql_vulnerable_to_object = function(block) {
 
 
 Sparql.sparql_depends_on_object = function(block) {
-  var value_verb = prefix+"depends-on"
+  var value_verb = prefix+"dependsOn"
   var value_object = Sparql.valueToCode(block, 'OBJECT', Sparql.ORDER_ATOMIC);
   var code =
       value_verb ?
@@ -124,11 +138,11 @@ Sparql.sparql_depends_on_object = function(block) {
 }
 
 Sparql.sparql_is_called_object = function(block) {
-  var value_verb = prefix+"is-called"
+  var value_verb = schema+"is-called"
   var value_object = Sparql.valueToCode(block, 'OBJECT', Sparql.ORDER_ATOMIC);
   var code =
       value_verb ?
-        ( prefix+"name" + ' ' +
+        ( schema+"name" + ' ' +
           (value_object ? value_object : '[]') +
           Sparql.STMNT_BRK ) :
         '';
@@ -188,7 +202,7 @@ Sparql.sparql_typedsubject_propertylist = function(block) {
       (value_type || statements_property_list !== '') ?
           ( (value_subject ? value_subject : '[]') +
             (value_type ?
-                ' '+ prefix+'type ' + value_type + (statements_property_list !== '' ? ';' : '') :
+                ' a ' + value_type + (statements_property_list !== '' ? ';' : '') :
                 '' ) +
             (statements_property_list !== '' ?
                 '\n' + statements_property_list :
@@ -198,10 +212,45 @@ Sparql.sparql_typedsubject_propertylist = function(block) {
   return code;
 };
 
-Sparql.sparql_type_version = function(block){
-  var code = prefix+'Version'
+Sparql.sparql_type_hardware_version = function(block){
+  var code = prefix+'HardwareVersion'
   return code
 }
+
+Sparql.sparql_type_software_version = function(block){
+  var code = prefix+'SoftwareVersion'
+  return code
+}
+Sparql.sparql_type_software = function(block){
+  var code = prefix+'Software'
+  return code
+}
+Sparql.sparql_type_hardware = function(block){
+  var code = prefix+'Hardware'
+  return code
+}
+Sparql.sparql_type_vulnerability = function(block){
+  var code = prefix+'Vulnerability'
+  return code
+}
+Sparql.sparql_type_vulnerability_type = function(block){
+  var code = prefix+'VulnerabilityType'
+  return code
+}
+Sparql.sparql_type_license = function(block){
+  var code = prefix+'License'
+  return code
+}
+Sparql.sparql_type_organization = function(block){
+  var code =  schema+'Organization'
+  return code
+}
+
+Sparql.sparql_type_person = function(block){
+  var code =  schema+'Person'
+  return code
+}
+
 
 Sparql.sparql_subject_propertylist = function(block) {
   var value_subject =

@@ -75,7 +75,7 @@ Blocks.block('sparql_variable', {
     }
 });
 
-Blocks.block('sparql_type_version', {
+Blocks.block('sparql_type_software_version', {
     /**
      * Block for variable getter.
      * @this Blockly.Block
@@ -86,7 +86,242 @@ Blocks.block('sparql_type_version', {
         this.setColour('#E6B58D');
         this.appendDummyInput()
             .appendField(" ")
-            .appendField("Version");
+            .appendField("Software Version");
+        this.setOutput(true, "Var");
+        this.setTooltip('');
+        // this.appendDummyInput()
+        //     .appendField(Blockly.Msg.VARIABLES_GET_TITLE)
+        //     .appendField(new Blockly.FieldVariable(
+        //     Blockly.Msg.VARIABLES_GET_ITEM), 'VAR')
+        //     .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
+        // this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
+        // this.contextMenuMsg_ = Blockly.Msg.VARIABLES_GET_CREATE_SET;
+        // this.contextMenuType_ = 'variables_set';
+
+    },
+});
+
+
+Blocks.block('sparql_type_organization', {
+    /**
+     * Block for variable getter.
+     * @this Blockly.Block
+     */
+    init: function () {
+        // this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
+        this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
+        this.setColour(100);
+        this.appendDummyInput()
+            .appendField(" ")
+            .appendField("Organization");
+        this.setOutput(true, "Var");
+        this.setTooltip('');
+        // this.appendDummyInput()
+        //     .appendField(Blockly.Msg.VARIABLES_GET_TITLE)
+        //     .appendField(new Blockly.FieldVariable(
+        //     Blockly.Msg.VARIABLES_GET_ITEM), 'VAR')
+        //     .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
+        // this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
+        // this.contextMenuMsg_ = Blockly.Msg.VARIABLES_GET_CREATE_SET;
+        // this.contextMenuType_ = 'variables_set';
+
+    },
+});
+
+
+Blocks.block('sparql_type_person', {
+    /**
+     * Block for variable getter.
+     * @this Blockly.Block
+     */
+    init: function () {
+        // this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
+        this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
+        this.setColour(100);
+        this.appendDummyInput()
+            .appendField(" ")
+            .appendField("Person");
+        this.setOutput(true, "Var");
+        this.setTooltip('');
+        // this.appendDummyInput()
+        //     .appendField(Blockly.Msg.VARIABLES_GET_TITLE)
+        //     .appendField(new Blockly.FieldVariable(
+        //     Blockly.Msg.VARIABLES_GET_ITEM), 'VAR')
+        //     .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
+        // this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
+        // this.contextMenuMsg_ = Blockly.Msg.VARIABLES_GET_CREATE_SET;
+        // this.contextMenuType_ = 'variables_set';
+
+    },
+});
+
+Blocks.block('sparql_type_hardware_version', {
+    /**
+     * Block for variable getter.
+     * @this Blockly.Block
+     */
+    init: function () {
+        // this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
+        this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
+        this.setColour('#E6B58D');
+        this.appendDummyInput()
+            .appendField(" ")
+            .appendField("Hardware Version");
+        this.setOutput(true, "Var");
+        this.setTooltip('');
+        // this.appendDummyInput()
+        //     .appendField(Blockly.Msg.VARIABLES_GET_TITLE)
+        //     .appendField(new Blockly.FieldVariable(
+        //     Blockly.Msg.VARIABLES_GET_ITEM), 'VAR')
+        //     .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
+        // this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
+        // this.contextMenuMsg_ = Blockly.Msg.VARIABLES_GET_CREATE_SET;
+        // this.contextMenuType_ = 'variables_set';
+
+    },
+});
+
+Blocks.block('sparql_type_hardware', {
+    /**
+     * Block for variable getter.
+     * @this Blockly.Block
+     */
+    init: function () {
+        // this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
+        this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
+        this.setColour('#E6B58D');
+        this.appendDummyInput()
+            .appendField(" ")
+            .appendField("Hardware");
+        this.setOutput(true, "Var");
+        this.setTooltip('');
+        // this.appendDummyInput()
+        //     .appendField(Blockly.Msg.VARIABLES_GET_TITLE)
+        //     .appendField(new Blockly.FieldVariable(
+        //     Blockly.Msg.VARIABLES_GET_ITEM), 'VAR')
+        //     .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
+        // this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
+        // this.contextMenuMsg_ = Blockly.Msg.VARIABLES_GET_CREATE_SET;
+        // this.contextMenuType_ = 'variables_set';
+
+    },
+});
+
+Blocks.block('sparql_type_vulnerability', {
+    /**
+     * Block for variable getter.
+     * @this Blockly.Block
+     */
+    init: function () {
+        // this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
+        this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
+        this.setColour('#E6B58D');
+        this.appendDummyInput()
+            .appendField(" ")
+            .appendField("Vulnerability");
+        this.setOutput(true, "Var");
+        this.setTooltip('');
+        // this.appendDummyInput()
+        //     .appendField(Blockly.Msg.VARIABLES_GET_TITLE)
+        //     .appendField(new Blockly.FieldVariable(
+        //     Blockly.Msg.VARIABLES_GET_ITEM), 'VAR')
+        //     .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
+        // this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
+        // this.contextMenuMsg_ = Blockly.Msg.VARIABLES_GET_CREATE_SET;
+        // this.contextMenuType_ = 'variables_set';
+
+    },
+});
+Blocks.block('sparql_type_vulnerability_type', {
+    /**
+     * Block for variable getter.
+     * @this Blockly.Block
+     */
+    init: function () {
+        // this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
+        this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
+        this.setColour('#E6B58D');
+        this.appendDummyInput()
+            .appendField(" ")
+            .appendField("Vulnerability Type");
+        this.setOutput(true, "Var");
+        this.setTooltip('');
+        // this.appendDummyInput()
+        //     .appendField(Blockly.Msg.VARIABLES_GET_TITLE)
+        //     .appendField(new Blockly.FieldVariable(
+        //     Blockly.Msg.VARIABLES_GET_ITEM), 'VAR')
+        //     .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
+        // this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
+        // this.contextMenuMsg_ = Blockly.Msg.VARIABLES_GET_CREATE_SET;
+        // this.contextMenuType_ = 'variables_set';
+
+    },
+});
+
+Blocks.block('sparql_type_software', {
+    /**
+     * Block for variable getter.
+     * @this Blockly.Block
+     */
+    init: function () {
+        // this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
+        this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
+        this.setColour('#E6B58D');
+        this.appendDummyInput()
+            .appendField(" ")
+            .appendField("Software");
+        this.setOutput(true, "Var");
+        this.setTooltip('');
+        // this.appendDummyInput()
+        //     .appendField(Blockly.Msg.VARIABLES_GET_TITLE)
+        //     .appendField(new Blockly.FieldVariable(
+        //     Blockly.Msg.VARIABLES_GET_ITEM), 'VAR')
+        //     .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
+        // this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
+        // this.contextMenuMsg_ = Blockly.Msg.VARIABLES_GET_CREATE_SET;
+        // this.contextMenuType_ = 'variables_set';
+
+    },
+});
+
+Blocks.block('sparql_type_hardware', {
+    /**
+     * Block for variable getter.
+     * @this Blockly.Block
+     */
+    init: function () {
+        // this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
+        this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
+        this.setColour('#E6B58D');
+        this.appendDummyInput()
+            .appendField(" ")
+            .appendField("Hardware");
+        this.setOutput(true, "Var");
+        this.setTooltip('');
+        // this.appendDummyInput()
+        //     .appendField(Blockly.Msg.VARIABLES_GET_TITLE)
+        //     .appendField(new Blockly.FieldVariable(
+        //     Blockly.Msg.VARIABLES_GET_ITEM), 'VAR')
+        //     .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
+        // this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
+        // this.contextMenuMsg_ = Blockly.Msg.VARIABLES_GET_CREATE_SET;
+        // this.contextMenuType_ = 'variables_set';
+
+    },
+});
+
+Blocks.block('sparql_type_license', {
+    /**
+     * Block for variable getter.
+     * @this Blockly.Block
+     */
+    init: function () {
+        // this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
+        this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
+        this.setColour('#E6B58D');
+        this.appendDummyInput()
+            .appendField(" ")
+            .appendField("License");
         this.setOutput(true, "Var");
         this.setTooltip('');
         // this.appendDummyInput()
