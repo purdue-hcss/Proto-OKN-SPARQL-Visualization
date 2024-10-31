@@ -13,7 +13,7 @@
     <html lang="en">
       <head>
         <meta charset="utf-8"/>
-        <title>SparqlBlocks Demo</title>
+        <title>Sparql Visual Query</title>
 
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" />

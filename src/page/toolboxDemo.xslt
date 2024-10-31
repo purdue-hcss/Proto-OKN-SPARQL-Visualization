@@ -17,7 +17,7 @@
                 </shadow>
               </value>
               <statement name="PROPERTY_LIST">
-                <shadow type="sparql_verb_object">
+                <shadow type="sparql_is_called_object">
                   <value name="VERB">
                     <shadow type="variables_get">
                       <field name="VAR">pred</field>

@@ -32,10 +32,9 @@ var SparqlGen = require('../generators/sparql.js'),
 const protocol = window.location.protocol;
 const hostname = window.location.hostname;
 const baseUrl = protocol + '//' + hostname;
-console.log(baseUrl);
 
-var endpointUri_txt = baseUrl + ''
-console.log(endpointUri_txt);
+var endpointUri_txt = baseUrl+':3030/kg'
+var  endpointUri_txt = 'http://secure-chain.akari.im:3030/kg'
 
 // var corsProxy = "https://cors-anywhere.herokuapp.com/";
 
